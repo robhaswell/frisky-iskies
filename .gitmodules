@@ -1,0 +1,12 @@
+[submodule "lib/bootstrap"]
+	path = lib/bootstrap
+	url = https://github.com/twbs/bootstrap.git
+[submodule "lib/jquery"]
+	path = lib/jquery
+	url = https://github.com/jquery/jquery.git
+[submodule "lib/chart"]
+	path = lib/chart
+	url = https://github.com/nnnick/Chart.js
+[submodule "lib/zend"]
+	path = lib/zend
+	url = https://github.com/zendframework/zf2.git

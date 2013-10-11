@@ -1,0 +1,23 @@
+<div class="jumbotron">
+    <h1><?php echo sprintf($this->translate('Welcome to %sFrisky Iskies%s'), '<span class="zf-green">', '</span>') ?></h1>
+    <p><?php echo sprintf($this->translate('How much isk would you like to make today?')) ?></p>
+    <div class="btn-group">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+            Choose an item <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu" id="select-item">
+            <li><a href="#">Choose an item</a></li>
+            <li><a href="javascript:;" data-item-id="25619">
+                Logic Circuit (Salvaged Materials)</a></li>
+            <li><a href="javascript:;" data-item-id="25620">
+                Interface Circuit (Salvaged Materials)</a></li>
+            <?php foreach ($items as $item) : ?>
+            <li><a href="javascript:;" data-item-id="<?php echo $item['id']?>">
+                <?php echo $this->escapeHtml($item['name']) ?> -
+                <?php echo round($item['margin'], 1) ?>%
+                (<?php echo $this->escapeHtml($item['group']) ?>)</a></li>
+            <?php endforeach ?>
+        </ul>
+    </div>
+</div>
+<canvas id="chart" width="800" height="600"></canvas>
